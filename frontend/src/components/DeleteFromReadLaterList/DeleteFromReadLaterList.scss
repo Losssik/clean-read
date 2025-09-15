@@ -1,0 +1,14 @@
+.delete-read-later {
+  position: absolute;
+  padding: 15px;
+  top: 10px;
+  right: 10px;
+}
+
+@media (max-width: 800px) {
+  .delete-read-later {
+    padding: 8px;
+    top: 5px;
+    right: 5px;
+  }
+}

@@ -1,0 +1,13 @@
+.rss {
+  &__article {
+    color: var(--text-secondary);
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__title {
+    color: var(--text-primary);
+  }
+}

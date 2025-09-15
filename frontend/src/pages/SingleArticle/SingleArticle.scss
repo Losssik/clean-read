@@ -1,0 +1,23 @@
+.single-article {
+  text-align: justify;
+  &__tags {
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  &__tag {
+    background-color: var(--border);
+    color: var(--text-secondary);
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: var(--accent-alt);
+      color: #fff;
+    }
+  }
+}

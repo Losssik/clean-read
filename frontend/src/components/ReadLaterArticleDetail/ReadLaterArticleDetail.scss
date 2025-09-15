@@ -1,0 +1,20 @@
+.read-later {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  &__title {
+    padding-right: 25px;
+  }
+}
+
+@media (max-width: 850px) {
+  .read-later {
+    height: auto;
+    padding-bottom: 30px;
+    &__title {
+      padding-right: 35px;
+    }
+  }
+}

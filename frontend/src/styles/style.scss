@@ -1,0 +1,117 @@
+@import "mixins";
+
+//components
+@import "../components/Navbar/Navbar.scss";
+@import "../components/Pagination/Pagination.scss";
+@import "../components//FeedbackMessage/FeedbackMessage.scss";
+@import "../components/DeleteFromReadLaterList/DeleteFromReadLaterList.scss";
+@import "../components//ReadLaterArticleDetail/ReadLaterArticleDetail.scss";
+@import "../components//AddOnReadLaterList/AddOnReadLaterList.scss";
+@import "../components//ArticleDetails/ArticleDetails.scss";
+@import "../components//SideMenu/SideMenu.scss";
+@import "../components/SearchArticle/SearchArticle.scss";
+@import "../components/Modal/Modal.scss";
+@import "../components/ArticleRSS/ArticleRSS.scss";
+
+//pages
+@import "../pages/AddArticle/AddArticle.scss";
+@import "../pages/Home/Home.scss";
+@import "../pages/Contact/Contact.scss";
+@import "../pages/Login/Login.scss";
+@import "../pages/NotFound/NotFounds.scss";
+@import "../pages/Signup/Signup.scss";
+@import "../pages/SingleArticle/SingleArticle.scss";
+@import "../pages/TagsPage/TagsPage.scss";
+@import "../pages/HotTopicsPoland/HotTopicsPoland.scss";
+
+// utils
+@import "../utils/Loader/Loader.scss";
+
+:root {
+  --background-main: #121212;
+  --background-box: #1e1e1e;
+  --text-primary: #ededed;
+  --text-secondary: #aaaaaa;
+  --link-accent: #457583;
+  --accent-alt: #ff6b6b;
+  --border: #2a2a2a;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-main);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+}
+
+a {
+  color: var(--link-accent);
+  text-decoration: none;
+  transition: color 0.4s ease;
+
+  &:hover {
+    color: var(--accent-alt);
+  }
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: var(--border);
+  color: #aaa;
+  cursor: pointer;
+}
+
+.delete {
+  top: 20px;
+  right: 10px;
+  position: absolute;
+  padding: 10px 5px;
+}
+
+button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border: 2px solid var(--border);
+  border-radius: 6px;
+  background-color: var(--background-box);
+  color: var(--text-primary);
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--accent-alt);
+    border-color: var(--accent-alt);
+    color: white;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}

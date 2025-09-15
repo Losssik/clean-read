@@ -1,0 +1,62 @@
+.book-loader {
+  width: 100px;
+  height: 80px;
+  perspective: 800px;
+  line-height: 0.8;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.book-page {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: white;
+  border: 1px solid black;
+  color: rgb(162, 8, 57);
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0 2px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.page-left {
+  left: 0;
+  z-index: 1;
+  animation: leftOpacity 2s infinite linear;
+}
+
+.page-right {
+  right: 0;
+  transform-origin: left;
+  background: white;
+  animation: openRight 2s infinite linear;
+  border-right: 2px solid rgb(162, 8, 57);
+  z-index: 2;
+}
+
+@keyframes openRight {
+  0% {
+    transform: rotateY(-180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(0deg);
+    opacity: 0.1;
+  }
+}
+
+@keyframes leftOpacity {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
