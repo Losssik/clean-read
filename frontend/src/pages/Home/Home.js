@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ArticleDetails from "../../components/ArticleDetails/ArticleDetails";
 import { useArticlesContext } from "../../hooks/useArticlesContext";
 import Pagination from "../../components/Pagination/Pagination";
+import GenerateArticle from "../../components/GenerateArticle/GenerateArticle";
 
 const Home = () => {
   const { articles, dispatch } = useArticlesContext();
@@ -35,6 +36,7 @@ const Home = () => {
 
   return (
     <div className="home">
+      <GenerateArticle />
       <div className="article">
         {articles &&
           articles.map((article) => (
