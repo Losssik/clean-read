@@ -13,6 +13,7 @@ import ReadLaterList from "./pages/ReadLaterList/ReadLaterList";
 import SearchedArticles from "./pages/SearchedArticles/SearchedArticles";
 import HotTopicsPoland from "./pages/HotTopicsPoland/HotTopicsPoland";
 import HotTopicsSport from "./pages/HotTopicsSport/HotTopicsSport";
+import HotTopicsTechnology from "./pages/HotTopicsTechnology/HotTopicsTechnology";
 
 function App() {
   const { user } = useAuthContext();
@@ -44,6 +45,10 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/hot-topics" element={<HotTopicsPoland />} />
           <Route path="/hot-topics/sport" element={<HotTopicsSport />} />
+          <Route
+            path="/hot-topics/technology"
+            element={<HotTopicsTechnology />}
+          />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

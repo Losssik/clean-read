@@ -4,7 +4,7 @@ const ArticleRSS = ({ article }) => {
       <h3 className="rss__title">{article.title}</h3>
       <p className="rss__content">{article.content}</p>
       <span className="rss__link">
-        <a href={article.link} target="_blank" rel="noopener noreferrer">
+        <a href={article.link} target="_blank" rel="noreferrer">
           read more
         </a>
       </span>

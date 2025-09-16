@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FcMenu } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import { GiSoccerKick } from "react-icons/gi";
+import { PiDesktopTower } from "react-icons/pi";
 
 import {
   FaHome,
@@ -100,6 +101,16 @@ const SideMenu = () => {
             >
               <GiSoccerKick className="side-menu__icon" />
               <span className="side-menu__text">SPORT TOPICS!</span>
+            </Link>
+          </li>
+          <li className="side-menu__item">
+            <Link
+              to="/hot-topics/technology"
+              className="side-menu__link"
+              onClick={() => setMenu(false)}
+            >
+              <PiDesktopTower className="side-menu__icon" />
+              <span className="side-menu__text">TECHNOLOGY & SCIENCE!</span>
             </Link>
           </li>
         </ul>
