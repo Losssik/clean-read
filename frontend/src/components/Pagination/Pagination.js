@@ -1,3 +1,5 @@
+import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
+
 const Pagination = ({ handlePrevious, handleNext, page, hasMore }) => {
   return (
     <div className="pagination">
@@ -6,15 +8,15 @@ const Pagination = ({ handlePrevious, handleNext, page, hasMore }) => {
         disabled={page === 0}
         className="pagination__button"
       >
-        Previous
+        <MdNavigateBefore size="20" />
       </button>
-      <span>Page {page + 1}</span>
+      <span className="pagination__span">{page + 1}</span>
       <button
         onClick={handleNext}
         disabled={!hasMore}
         className="pagination__button"
       >
-        Next
+        <MdNavigateNext size="20" />
       </button>
     </div>
   );

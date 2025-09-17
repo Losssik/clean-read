@@ -1,6 +1,14 @@
 .pagination {
   position: absolute;
-  bottom: 0;
+  bottom: 5;
   right: 50%;
   transform: translateX(50%);
+
+  &__button {
+    padding: 2px 20px;
+  }
+
+  &__span {
+    margin: 0 10px;
+  }
 }
