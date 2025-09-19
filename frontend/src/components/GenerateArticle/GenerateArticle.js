@@ -1,15 +1,12 @@
 const GenerateArticle = () => {
   const handleGenerate = async () => {
     try {
-      const response = await fetch(
-        `http://localhost:4000/api/ai/generate-article`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await fetch(`/api/ai/generate-article`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
       if (!response.ok) {
         throw new Error(`Błąd: ${response.statusText}`);

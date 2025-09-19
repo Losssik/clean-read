@@ -14,7 +14,7 @@ const useLogin = () => {
 
     const user = { email, password };
 
-    const response = await fetch("http://localhost:4000/api/user/login", {
+    const response = await fetch("/api/user/login", {
       method: "POST",
       body: JSON.stringify(user),
       headers: {

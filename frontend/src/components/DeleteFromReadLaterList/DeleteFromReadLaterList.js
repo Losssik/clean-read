@@ -7,16 +7,13 @@ const DeleteFromReadLaterList = ({ article }) => {
   const { dispatch } = useReadLaterContext();
 
   const handleDelete = async () => {
-    const response = await fetch(
-      `http://localhost:4000/api/user/read-later/${article._id}`,
-      {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${user.token}`,
-        },
-      }
-    );
+    const response = await fetch(`/api/user/read-later/${article._id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${user.token}`,
+      },
+    });
 
     if (response.ok) {
       dispatch({

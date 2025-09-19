@@ -10,11 +10,10 @@ const Home = () => {
   const [hasMore, setHasMore] = useState(true);
   const articlesPerPage = 10;
 
+  //    `https://host559218.xce.pl/api/articles?page=${page}`
   useEffect(() => {
     const fetchArticles = async () => {
-      const respone = await fetch(
-        `http://localhost:4000/api/articles?page=${page}`
-      );
+      const respone = await fetch(`/api/articles?page=${page}`);
       const data = await respone.json();
 
       if (respone.ok) {

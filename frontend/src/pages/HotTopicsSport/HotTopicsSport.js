@@ -9,9 +9,7 @@ const HotTopicsSport = () => {
   useEffect(() => {
     setLoading(true);
     const fetchSport = async () => {
-      const response = await fetch(
-        "http://localhost:4000/api/rss/top-news-poland/sport"
-      );
+      const response = await fetch("/api/rss/top-news-poland/sport");
 
       const data = await response.json();
 

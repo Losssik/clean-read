@@ -14,7 +14,7 @@ const useSignup = () => {
 
     const user = { email, name, password };
 
-    const response = await fetch("http://localhost:4000/api/user/signup", {
+    const response = await fetch("/api/user/signup", {
       method: "POST",
       body: JSON.stringify(user),
       headers: {

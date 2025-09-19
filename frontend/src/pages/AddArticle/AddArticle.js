@@ -27,7 +27,7 @@ const AddArticle = () => {
 
     const article = { title, content, tags: tagsArray };
 
-    const response = await fetch("http://localhost:4000/api/articles", {
+    const response = await fetch("/api/articles", {
       method: "POST",
       body: JSON.stringify(article),
       headers: {

@@ -26,14 +26,11 @@ const Navbar = () => {
     if (!user) return;
     const fetchReadLater = async () => {
       try {
-        const response = await fetch(
-          `http://localhost:4000/api/user/read-later/`,
-          {
-            headers: {
-              Authorization: `Bearer ${user.token}`,
-            },
-          }
-        );
+        const response = await fetch(`/api/user/read-later/`, {
+          headers: {
+            Authorization: `Bearer ${user.token}`,
+          },
+        });
         const data = await response.json();
         dispatch({
           type: "GET_READ_LATER_LIST",

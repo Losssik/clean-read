@@ -18,7 +18,7 @@ const Contact = () => {
       return;
     }
 
-    const response = await fetch("http://localhost:4000/contact", {
+    const response = await fetch("/contact", {
       method: "POST",
       body: JSON.stringify({ email, userMessage }),
       headers: {

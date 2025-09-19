@@ -8,9 +8,7 @@ const TagsPage = () => {
 
   useEffect(() => {
     const fetchTagArticles = async () => {
-      const response = await fetch(
-        `http://localhost:4000/api/articles/?tags=${tag}`
-      );
+      const response = await fetch(`/api/articles/?tags=${tag}`);
 
       const data = await response.json();
 

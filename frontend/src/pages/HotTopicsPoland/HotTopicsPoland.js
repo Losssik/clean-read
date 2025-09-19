@@ -10,12 +10,9 @@ const HotTopicsPoland = () => {
     const fetchArticles = async () => {
       setLoading(true);
       try {
-        const response = await fetch(
-          "http://localhost:4000/api/rss/top-news-poland",
-          {
-            method: "GET",
-          }
-        );
+        const response = await fetch("/api/rss/top-news-poland", {
+          method: "GET",
+        });
 
         if (!response.ok) {
           throw new Error(`Błąd HTTP: ${response.status}`);

@@ -1,3 +1,5 @@
+const path = require("path");
+
 require("dotenv").config();
 const cors = require("cors");
 const express = require("express");
@@ -31,6 +33,14 @@ app.use("/contact", (req, res, next) => {
   next();
 });
 
+if (process.env.NODE_ENV === "production") {
+  // serwowanie frontend build
+  app.use(express.static(path.join(__dirname, "frontend/build")));
+
+  app.get("*", (req, res) =>
+    res.sendFile(path.join(__dirname, "frontend/build", "index.html"))
+  );
+}
 // connect to database
 mongoose
   .connect(process.env.MONGO_URL)

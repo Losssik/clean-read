@@ -13,9 +13,7 @@ const SearchArticle = () => {
       setSearchText("");
 
       try {
-        const response = await fetch(
-          `http://localhost:4000/api/articles/search?q=${searchText}`
-        );
+        const response = await fetch(`api/articles/search?q=${searchText}`);
         const data = await response.json();
 
         if (response.ok) {

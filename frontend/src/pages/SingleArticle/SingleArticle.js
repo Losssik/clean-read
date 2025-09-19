@@ -11,9 +11,7 @@ const SingleArticle = () => {
   useEffect(() => {
     const fetchArticle = async () => {
       try {
-        const response = await fetch(
-          `http://localhost:4000/api/articles/${id}`
-        );
+        const response = await fetch(`/api/articles/${id}`);
         const data = await response.json();
 
         if (response.ok) {
