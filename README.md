@@ -5,20 +5,22 @@ New article appears every 6hour. It also allows users to add their own articles,
 
 ---
 
-## 🌍 Live hosted on my server using PUTTY and my own domain.
+## 🌍hosted on my server using PUTTY and my own domain (this one is free, later gonna get a new one when project is polished :)
 👉 [https://host559218.xce.pl/](https://host559218.xce.pl/)
+- LOGIN: demo@cleanread.app
+- PASSWORD: demo123
 
 ---
 
 ## 🚀 Features
-- 🔑 **JWT Authentication** – user signup & login  
+- 🔑 **JWT Authentication** – signup & login  
 - 📰 **NewsAPI Integration** – fetch the latest news articles  
 - 🤖 **AI Generator** – create new articles based on fetched content  
 - ✍️ **User Articles** – add and manage your own articles  
-- ⏰ **Automated Articles** – server generates a new AI-based article every 6 hours  
+- ⏰ **Automated Articles** – server generates a new article every 6 hours from HOT Topic
 - 📌 **Read-Later List** – save articles for future reading  
-- 🏷️ **Tags** – organize and filter articles  
-- 🔍 **Search** – find articles quickly  
+- 🏷️ **Tags** – organize and filter articles, complex tax validation
+- 🔍 **Search** – for finding articles 
 - 🎨 **BEM + SASS Styling** – for styling
 - 📧 **Contact Form (Nodemailer)** – send messages
 - ⚛️ **Reducer + Context API** – for state
