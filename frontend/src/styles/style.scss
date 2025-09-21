@@ -15,6 +15,7 @@
 
 //pages
 @import "../pages/AddArticle/AddArticle.scss";
+@import "../pages/AboutUs/AboutUs.scss";
 @import "../pages/Home/Home.scss";
 @import "../pages/Contact/Contact.scss";
 @import "../pages/Login/Login.scss";
@@ -26,6 +27,8 @@
 
 // utils
 @import "../utils/Loader/Loader.scss";
+
+// base styling
 
 :root {
   --background-main: #121212;

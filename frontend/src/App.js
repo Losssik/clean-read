@@ -14,6 +14,7 @@ import SearchedArticles from "./pages/SearchedArticles/SearchedArticles";
 import HotTopicsPoland from "./pages/HotTopicsPoland/HotTopicsPoland";
 import HotTopicsSport from "./pages/HotTopicsSport/HotTopicsSport";
 import HotTopicsTechnology from "./pages/HotTopicsTechnology/HotTopicsTechnology";
+import AboutUs from "./pages/AboutUs/AboutUs";
 
 function App() {
   const { user } = useAuthContext();
@@ -41,6 +42,7 @@ function App() {
             path="/user/read-later"
             element={user ? <ReadLaterList /> : <Navigate to="/login" />}
           />
+          <Route path="/about" element={<AboutUs />} />
           <Route path="/articles/new" element={<AddArticle />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/hot-topics" element={<HotTopicsPoland />} />

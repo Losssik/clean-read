@@ -1,0 +1,23 @@
+.about-us {
+  &__welcome {
+    font-size: 16px;
+  }
+
+  &__sub-section__title {
+    font-size: 20px;
+    margin-top: 40px;
+  }
+
+  &__sub-section__text {
+    font-size: 16px;
+  }
+
+  &__list {
+    list-style-type: circle;
+    margin-left: 40px;
+
+    &-item {
+      font-size: 14px;
+    }
+  }
+}
