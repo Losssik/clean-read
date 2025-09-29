@@ -3,6 +3,8 @@ import { FcMenu } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import { GiSoccerKick } from "react-icons/gi";
 import { PiDesktopTower } from "react-icons/pi";
+import { useAuthContext } from "../../hooks/useAuthContext";
+import { useLogout } from "../../hooks/useLogout";
 
 import {
   FaHome,
@@ -15,9 +17,15 @@ import {
 
 const SideMenu = () => {
   const [menu, setMenu] = useState(false);
+  const { user } = useAuthContext();
+  const { logout } = useLogout();
 
   const toggleMenu = () => {
     setMenu((prev) => !prev);
+  };
+
+  const handleLogout = () => {
+    logout();
   };
 
   return (
@@ -114,6 +122,7 @@ const SideMenu = () => {
             </Link>
           </li>
         </ul>
+        {user && <button onClick={handleLogout}>logout</button>}
       </div>
     </div>
   );

@@ -70,7 +70,9 @@
   }
 
   &__logout {
-    margin-left: auto;
+    position: absolute;
+    right: 10px;
+    bottom: 38px;
   }
   &__auth-links {
     display: flex;
