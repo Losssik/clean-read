@@ -66,6 +66,7 @@ const SingleArticle = () => {
         <>
           <h1>{article.title}</h1>
           <p
+            className="single-article__content"
             dangerouslySetInnerHTML={{
               __html: formatContent(article.content),
             }}

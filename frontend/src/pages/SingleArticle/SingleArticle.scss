@@ -1,10 +1,13 @@
 .single-article {
-  text-align: justify;
   &__tags {
     margin: 10px 0;
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
+  }
+
+  &__content {
+    color: var(--text-secondary);
   }
 
   &__tag {
