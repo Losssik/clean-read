@@ -26,7 +26,7 @@ app.use((req, res, next) => {
 app.use("/api/ai", aiRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/articles", articleRoutes);
-app.use("/contact", contactRoutes);
+app.use("/api/contact", contactRoutes);
 app.use("/api/rss/", rssRoutes);
 app.use("/contact", (req, res, next) => {
   console.log("Request body:", req.body); // To sprawdzi, co otrzymujesz
